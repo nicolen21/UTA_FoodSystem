@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout">
+
+    <TextView
+        android:id="@+id/CheckoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/orderSummary"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#D4EFFC"
+        android:src="@drawable/ic_fastfood"
+        android:layout_below="@id/CheckoutText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <RadioGroup
+        android:id="@+id/radio_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/orderSummary">
+
+        <RadioButton android:id="@+id/radio_pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pickup"
+            android:layout_marginRight="25dp"/>
+
+        <RadioButton android:id="@+id/radio_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/PromoCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_btns"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="Promo Code:"
+        />
+
+    <EditText
+        android:id="@+id/UserPromoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PromoCodeText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Enter Code Here"/>
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserPromoCode"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="Total: Will add variable here later LOL"
+        />
+
+
+    <Button
+        android:id="@+id/PayNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Total"
+        android:layout_marginTop="25dp"
+        android:text="Pay Now"
+        android:backgroundTint="#0064b1"/>
+
+</RelativeLayout>
